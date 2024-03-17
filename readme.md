@@ -1,4 +1,4 @@
-## ECDSA Node
+## ECDSA Node Boilerplate
 
 This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
 
@@ -29,3 +29,10 @@ The server folder contains a node.js server using [express](https://expressjs.co
 The application should connect to the default server port (3042) automatically! 
 
 _Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` to automatically restart the server on any changes.
+
+
+### Erick's Changes
+
+I've added a few important changes to the original boilerplate to avoid having to put up the private keys on the client side. While this obviously does not completely solve all security issues, it is a step in the right direction. Additionally I have decided to put the code checking for the signature and verification on the server side. Again this to avoid having to put up the private keys on the client side.
+
+The one change that could be thought of as unecessary but I added it any way is the use of an array for the respective balances as opposed to a single object with different address within it. It just made more sense to me as a change.

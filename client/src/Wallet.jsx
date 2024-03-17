@@ -1,4 +1,5 @@
 import server from "./server";
+import { keccak256 } from "ethereum-cryptography/keccak"
 
 function Wallet({ address, setAddress, balance, setBalance }) {
   async function onChange(evt) {
